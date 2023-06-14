@@ -1,0 +1,27 @@
+[
+  {
+    "event_type": "Political Rally",
+    "average_crowd": 5000,
+    "police_assigned": 50
+  },
+  {
+    "event_type": "Music Festival",
+    "average_crowd": 20000,
+    "police_assigned": 150
+  },
+  {
+    "event_type": "Sports Game",
+    "average_crowd": 15000,
+    "police_assigned": 100
+  },
+  {
+    "event_type": "Community Parade",
+    "average_crowd": 3000,
+    "police_assigned": 30
+  },
+  {
+    "event_type": "Protest March",
+    "average_crowd": 10000,
+    "police_assigned": 80
+  }
+]
