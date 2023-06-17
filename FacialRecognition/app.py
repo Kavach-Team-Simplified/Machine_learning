@@ -39,7 +39,7 @@ def register1():
     # image_path = os.path.abspath(img1)
     # print(image_path)
 
-    with open(r"C:/Users/ramya/OneDrive/Desktop/VIT/KAVACH/Machine_learning/FacialRecognition/database.json", "r") as file:
+    with open(r"C:/Kavach/ML/Models/FacialRecognition/database.json", "r") as file:
         data = json.load(file)
 
     # Check if the username already exists
@@ -75,7 +75,7 @@ def verify1():
     cap.release()
     detections = embedder.extract(img_filename, threshold=0.95)[0]
     embedding1 = detections["embedding"]
-    with open("C:/Users/ramya/OneDrive/Desktop/VIT/KAVACH/Machine_learning/FacialRecognition/database.json", "r") as file:
+    with open("C:\Kavach\ML\Models\FacialRecognition\database.json", "r") as file:
         data = json.load(file)
     i=0
     k=[]
