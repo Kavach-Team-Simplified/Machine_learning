@@ -65,6 +65,9 @@ def test_connect():
     print("Connected")
     emit("my response", {"data": "Connected"})
 
+
+
+
 @socketio.on("image")
 def receive_image(image):
     net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
