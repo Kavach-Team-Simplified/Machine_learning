@@ -77,6 +77,7 @@ def receive_image(image):
     a = len(results)
     print(a)
     if a<3:
+        
         emit("processed_text", str(a))
     else:
         emit("processed_text", "Crowd Detection: "+str(a))
@@ -92,8 +93,8 @@ if __name__ == "__main__":
     ap.add_argument("-o", "--output", type=str, default="", help="path to (optional) output video file")
     ap.add_argument("-d", "--display", type=int, default=1, help="whether or not output frame should be displayed")
     args = vars(ap.parse_args(["--input", r"C:/Kavach/ML/Models/CrowdDetection/test2.mp4", "--output", "my_output.avi", "--display", "1"]))
-    labelsPath = os.path.sep.join([r"C:/Test_Socket/crowd_backend-master/yolo-coco/coco.names"])
+    labelsPath = os.path.sep.join([r"C:/Kavach/ML/Models/CrowdDetection/yolo-coco/coco.names"])
     LABELS = open(labelsPath).read().strip().split("\n")
-    weightsPath = os.path.sep.join([r"C:/Test_Socket/crowd_backend-master/yolo-coco/yolov3.weights"])
-    configPath = os.path.sep.join([r"C:/Test_Socket/crowd_backend-master/yolo-coco/yolov3.cfg"])
+    weightsPath = os.path.sep.join([r"C:/Kavach/ML/Models/CrowdDetection/yolo-coco/yolov3.weights"])
+    configPath = os.path.sep.join([r"C:/Kavach/ML/Models/CrowdDetection/yolo-coco/yolov3.cfg"])
     socketio.run(app, debug=True)
